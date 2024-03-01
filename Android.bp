@@ -90,20 +90,9 @@ android_app_import {
 }
 
 android_app_import {
-	name: "PowerOffAlarm",
-	owner: "oneplus",
-	apk: "proprietary/product/app/PowerOffAlarm/PowerOffAlarm.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	product_specific: true,
-}
-
-android_app_import {
 	name: "HotwordEnrollmentOKGoogle",
 	owner: "oneplus",
-	apk: "proprietary/product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogle.apk",
+	apk: "proprietary/product/priv-app/HotwordEnrollmentOKGoogle/HotwordEnrollmentOKGoogle.apk",
 	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
@@ -115,7 +104,7 @@ android_app_import {
 android_app_import {
 	name: "HotwordEnrollmentXGoogle",
 	owner: "oneplus",
-	apk: "proprietary/product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogle.apk",
+	apk: "proprietary/product/priv-app/HotwordEnrollmentXGoogle/HotwordEnrollmentXGoogle.apk",
 	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
@@ -128,6 +117,17 @@ android_app_import {
 	name: "ImsRcsService",
 	owner: "oneplus",
 	apk: "proprietary/system_ext/app/ImsRcsService/ImsRcsService.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	system_ext_specific: true,
+}
+
+android_app_import {
+	name: "QCC",
+	owner: "oneplus",
+	apk: "proprietary/system_ext/app/QCC/QCC.apk",
 	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
