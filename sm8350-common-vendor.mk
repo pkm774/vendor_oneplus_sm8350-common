@@ -995,6 +995,7 @@ PRODUCT_PACKAGES += \
     ims \
     qcrilmsgtunnel \
     WfdCommon \
+    com.android.hotwordenrollment.common.util.impl \
     com.android.hotwordenrollment.common.util \
     com.qti.dpmframework \
     dpmapi \

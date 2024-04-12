@@ -92,7 +92,7 @@ android_app_import {
 android_app_import {
 	name: "HotwordEnrollmentOKGoogle",
 	owner: "oneplus",
-	apk: "proprietary/product/priv-app/HotwordEnrollmentOKGoogle/HotwordEnrollmentOKGoogle.apk",
+	apk: "proprietary/product/priv-app/HotwordEnrollmentOKGoogle.apk",
 	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
@@ -104,7 +104,7 @@ android_app_import {
 android_app_import {
 	name: "HotwordEnrollmentXGoogle",
 	owner: "oneplus",
-	apk: "proprietary/product/priv-app/HotwordEnrollmentXGoogle/HotwordEnrollmentXGoogle.apk",
+	apk: "proprietary/product/priv-app/HotwordEnrollmentXGoogle.apk",
 	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
@@ -209,6 +209,13 @@ dex_import {
 	name: "WfdCommon",
 	owner: "oneplus",
 	jars: ["proprietary/system/framework/WfdCommon.jar"],
+}
+
+dex_import {
+	name: "com.android.hotwordenrollment.common.util.impl",
+	owner: "oneplus",
+	jars: ["proprietary/product/framework/com.android.hotwordenrollment.common.util.impl.jar"],
+	product_specific: true,
 }
 
 dex_import {
