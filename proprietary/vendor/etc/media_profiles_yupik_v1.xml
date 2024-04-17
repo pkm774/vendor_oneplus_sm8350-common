@@ -99,15 +99,7 @@
 <MediaSettings>
     <!-- Each camcorder profile defines a set of predefined configuration parameters -->
     <!-- Back Camera -->
-    <!-- #ifndef OPLUS_BUG_COMPATIBILITY -->
-    <!-- yangwen@PSW.MULTIMEDIA.MediaServer.Record.665865, 2020/11/27, -->
-    <!-- Modify for avoiding video recording signal tone -->
-    <!--
     <CamcorderProfiles cameraId="0">
-    -->
-    <!-- #else  //OPLUS_BUG_COMPATIBILITY -->
-    <CamcorderProfiles cameraId="0" startOffsetMs="500">
-    <!-- #endif //OPLUS_BUG_COMPATIBILITY -->
 
     <EncoderProfile quality="low" fileFormat="3gp" duration="30">
       <Video codec="h264"
@@ -123,23 +115,11 @@
     </EncoderProfile>
 
     <EncoderProfile quality="high" fileFormat="mp4" duration="30">
-<!-- #ifndef OPLUS_BUG_COMPATIBILITY -->
-<!-- yangwen@MULTIMEDIA.MediaServer.cts.662064,20201207 -->
-<!-- Modify for deleting 4K video recording -->
-<!--
       <Video codec="h264"
              bitRate="50000000"
              width="3840"
              height="2160"
              frameRate="30" />
--->
-<!-- #else  //OPLUS_BUG_COMPATIBILITY -->
-      <Video codec="h264"
-             bitRate="20000000"
-             width="1920"
-             height="1080"
-             frameRate="30" />
-<!-- #endif //OPLUS_BUG_COMPATIBILITY -->
 
       <Audio codec="aac"
              bitRate="156000"
@@ -212,23 +192,6 @@
              channels="2" />
     </EncoderProfile>
 
-<!-- #ifndef OPLUS_BUG_COMPATIBILITY -->
-<!-- yangwen@MULTIMEDIA.MediaServer.cts.662064,20201207 -->
-<!-- Remove for deleting 4K video recording -->
-<!--
-    <EncoderProfile quality="4kdci" fileFormat="mp4" duration="30">
-      <Video codec="h264"
-            bitRate="57500000"
-            width="4096"
-            height="2160"
-            frameRate="30" />
-
-      <Audio codec="aac"
-            bitRate="156000"
-            sampleRate="48000"
-            channels="2" />
-    </EncoderProfile>
-
     <EncoderProfile quality="2160p" fileFormat="mp4" duration="30">
       <Video codec="h264"
             bitRate="50000000"
@@ -241,8 +204,6 @@
             sampleRate="48000"
             channels="2" />
     </EncoderProfile>
--->
-<!-- #endif //OPLUS_BUG_COMPATIBILITY -->
 
     <EncoderProfile quality="qcif" fileFormat="3gp" duration="30">
       <Video codec="h264"
@@ -285,23 +246,11 @@
     </EncoderProfile>
 
     <EncoderProfile quality="timelapsehigh" fileFormat="mp4" duration="30">
-<!-- #ifndef OPLUS_BUG_COMPATIBILITY -->
-<!-- yangwen@MULTIMEDIA.MediaServer.cts.662064,20201207 -->
-<!-- Modify for deleting 4K video recording -->
-<!--
       <Video codec="h264"
              bitRate="50000000"
              width="3840"
              height="2160"
              frameRate="30" />
--->
-<!-- #else  //OPLUS_BUG_COMPATIBILITY -->
-      <Video codec="h264"
-             bitRate="20000000"
-             width="1920"
-             height="1080"
-             frameRate="30" />
-<!-- #endif //OPLUS_BUG_COMPATIBILITY -->
 
       <!-- audio setting is ignored -->
       <Audio codec="aac"
@@ -409,10 +358,6 @@
              channels="2" />
     </EncoderProfile>
 
-<!-- #ifndef OPLUS_BUG_COMPATIBILITY -->
-<!-- yangwen@MULTIMEDIA.MediaServer.cts.662064,20201207 -->
-<!-- Remove for deleting 4K video recording -->
-<!--
     <EncoderProfile quality="timelapse4kdci" fileFormat="mp4" duration="30">
       <Video codec="h264"
             bitRate="57500000"
@@ -438,8 +383,6 @@
             sampleRate="48000"
             channels="2" />
     </EncoderProfile>
--->
-<!-- #endif //OPLUS_BUG_COMPATIBILITY -->
 
         <ImageEncoding quality="95" />
         <ImageEncoding quality="80" />
@@ -448,15 +391,7 @@
 
     </CamcorderProfiles>
     <!-- Front Camera -->
-    <!-- #ifndef OPLUS_BUG_COMPATIBILITY -->
-    <!-- yangwen@PSW.MULTIMEDIA.MediaServer.Record.665865, 2020/11/27, -->
-    <!-- Modify for avoiding video recording signal tone -->
-    <!--
     <CamcorderProfiles cameraId="1">
-    -->
-    <!-- #else  //OPLUS_BUG_COMPATIBILITY -->
-    <CamcorderProfiles cameraId="1" startOffsetMs="500">
-    <!-- #endif //OPLUS_BUG_COMPATIBILITY -->
 
     <EncoderProfile quality="low" fileFormat="3gp" duration="30">
       <Video codec="h264"
@@ -471,9 +406,6 @@
              channels="1" />
     </EncoderProfile>
 
-<!-- #ifdef OPLUS_BUG_COMPATIBILITY -->
-<!-- yangwen@MULTIMEDIA.MediaServer.cts.662064,20201207 -->
-<!-- Modify for deleting 4K video recording -->
     <EncoderProfile quality="high" fileFormat="mp4" duration="30">
       <Video codec="h264"
              bitRate="20000000"
@@ -486,7 +418,6 @@
              sampleRate="48000"
              channels="2" />
     </EncoderProfile>
-<!-- #endif //OPLUS_BUG_COMPATIBILITY -->
 
     <EncoderProfile quality="qvga" fileFormat="mp4" duration="60">
       <Video codec="h264"
@@ -553,37 +484,6 @@
              channels="2" />
     </EncoderProfile>
 
-<!-- #ifndef OPLUS_BUG_COMPATIBILITY -->
-<!-- yangwen@MULTIMEDIA.MediaServer.cts.662064,20201207, -->
-<!-- Remove for deleting 4K video recording -->
-<!--
-    <EncoderProfile quality="4kdci" fileFormat="mp4" duration="30">
-      <Video codec="h264"
-            bitRate="57500000"
-            width="4096"
-            height="2160"
-            frameRate="30" />
-
-      <Audio codec="aac"
-            bitRate="156000"
-            sampleRate="48000"
-            channels="2" />
-    </EncoderProfile>
-
-    <EncoderProfile quality="2160p" fileFormat="mp4" duration="30">
-      <Video codec="h264"
-            bitRate="50000000"
-            width="3840"
-            height="2160"
-            frameRate="30" />
-
-      <Audio codec="aac"
-            bitRate="156000"
-            sampleRate="48000"
-            channels="2" />
-    </EncoderProfile>
--->
-<!-- #endif //OPLUS_BUG_COMPATIBILITY -->
     <EncoderProfile quality="qcif" fileFormat="3gp" duration="30">
       <Video codec="h264"
              bitRate="192000"
@@ -625,9 +525,6 @@
              channels="1" />
     </EncoderProfile>
 
-<!-- #ifdef OPLUS_BUG_COMPATIBILITY -->
-<!-- yangwen@MULTIMEDIA.MediaServer.cts.662064,20201207 -->
-<!-- Modify for deleting 4K video recording -->
     <EncoderProfile quality="timelapsehigh" fileFormat="mp4" duration="30">
       <Video codec="h264"
              bitRate="20000000"
@@ -641,7 +538,6 @@
              sampleRate="48000"
              channels="2" />
     </EncoderProfile>
-<!-- #endif //OPLUS_BUG_COMPATIBILITY -->
 
     <EncoderProfile quality="timelapseqcif" fileFormat="mp4" duration="30">
       <Video codec="h264"
@@ -741,38 +637,6 @@
              channels="2" />
     </EncoderProfile>
 
-<!-- #ifndef OPLUS_BUG_COMPATIBILITY -->
-<!-- yangwen@MULTIMEDIA.MediaServer.cts.662064,20201207, -->
-<!-- Remove for deleting 4K video recording -->
-<!--
-    <EncoderProfile quality="timelapse4kdci" fileFormat="mp4" duration="30">
-      <Video codec="h264"
-            bitRate="57500000"
-            width="4096"
-            height="2160"
-            frameRate="30" />
-
-      <Audio codec="aac"
-            bitRate="156000"
-            sampleRate="48000"
-            channels="2" />
-    </EncoderProfile>
-
-    <EncoderProfile quality="timelapse2160p" fileFormat="mp4" duration="30">
-      <Video codec="h264"
-            bitRate="50000000"
-            width="3840"
-            height="2160"
-            frameRate="30" />
-
-      <Audio codec="aac"
-            bitRate="156000"
-            sampleRate="48000"
-            channels="2" />
-    </EncoderProfile>
--->
-<!-- #endif //OPLUS_BUG_COMPATIBILITY -->
-
         <ImageEncoding quality="95" />
         <ImageEncoding quality="80" />
         <ImageEncoding quality="70" />
@@ -796,23 +660,11 @@
     </EncoderProfile>
 
     <EncoderProfile quality="high" fileFormat="mp4" duration="30">
-<!-- #ifndef OPLUS_BUG_COMPATIBILITY -->
-<!-- yangwen@MULTIMEDIA.MediaServer.cts.662064,20201207, -->
-<!-- Modify for deleting 4K video recording -->
-<!--
       <Video codec="h264"
              bitRate="50000000"
              width="3840"
              height="2160"
              frameRate="30" />
--->
-<!-- #else  //OPLUS_BUG_COMPATIBILITY -->
-      <Video codec="h264"
-             bitRate="20000000"
-             width="1920"
-             height="1080"
-             frameRate="30" />
-<!-- #endif //OPLUS_BUG_COMPATIBILITY -->
 
       <Audio codec="aac"
              bitRate="156000"
@@ -885,10 +737,6 @@
              channels="2" />
     </EncoderProfile>
 
-<!-- #ifndef OPLUS_BUG_COMPATIBILITY -->
-<!-- yangwen@MULTIMEDIA.MediaServer.cts.662064,20201207, -->
-<!-- Remove for deleting 4K video recording -->
-<!--
     <EncoderProfile quality="4kdci" fileFormat="mp4" duration="30">
       <Video codec="h264"
             bitRate="57500000"
@@ -914,8 +762,6 @@
             sampleRate="48000"
             channels="2" />
     </EncoderProfile>
--->
-<!-- #endif //OPLUS_BUG_COMPATIBILITY -->
 
     <EncoderProfile quality="qcif" fileFormat="3gp" duration="30">
       <Video codec="h264"
@@ -958,23 +804,11 @@
     </EncoderProfile>
 
     <EncoderProfile quality="timelapsehigh" fileFormat="mp4" duration="30">
-<!-- #ifndef OPLUS_BUG_COMPATIBILITY -->
-<!-- yangwen@MULTIMEDIA.MediaServer.cts.662064,20201207, -->
-<!-- Modify for deleting 4K video recording -->
-<!--
       <Video codec="h264"
              bitRate="50000000"
              width="3840"
              height="2160"
              frameRate="30" />
--->
-<!-- #else  //OPLUS_BUG_COMPATIBILITY -->
-      <Video codec="h264"
-             bitRate="20000000"
-             width="1920"
-             height="1080"
-             frameRate="30" />
-<!-- #endif //OPLUS_BUG_COMPATIBILITY -->
 
       <!-- audio setting is ignored -->
       <Audio codec="aac"
@@ -1082,10 +916,6 @@
              channels="2" />
     </EncoderProfile>
 
-<!-- #ifndef OPLUS_BUG_COMPATIBILITY -->
-<!-- yangwen@MULTIMEDIA.MediaServer.cts.662064,20201207, -->
-<!-- Remove for deleting 4K video recording -->
-<!--
     <EncoderProfile quality="timelapse4kdci" fileFormat="mp4" duration="30">
       <Video codec="h264"
             bitRate="57500000"
@@ -1111,8 +941,6 @@
             sampleRate="48000"
             channels="2" />
     </EncoderProfile>
--->
-<!-- #endif //OPLUS_BUG_COMPATIBILITY -->
 
     <EncoderProfile quality="highspeed1080p" fileFormat="mp4" duration="30">
       <Video codec="h264"
@@ -1192,23 +1020,11 @@
     </EncoderProfile>
 
     <EncoderProfile quality="high" fileFormat="mp4" duration="30">
-<!-- #ifndef OPLUS_BUG_COMPATIBILITY -->
-<!-- yangwen@MULTIMEDIA.MediaServer.cts.662064,20201207, -->
-<!-- Modify for deleting 4K video recording -->
-<!--
       <Video codec="h264"
              bitRate="50000000"
              width="3840"
              height="2160"
              frameRate="30" />
--->
-<!-- #else  //OPLUS_BUG_COMPATIBILITY -->
-      <Video codec="h264"
-             bitRate="20000000"
-             width="1920"
-             height="1080"
-             frameRate="30" />
-<!-- #endif //OPLUS_BUG_COMPATIBILITY -->
 
       <Audio codec="aac"
              bitRate="156000"
@@ -1281,10 +1097,6 @@
              channels="2" />
     </EncoderProfile>
 
-<!-- #ifndef OPLUS_BUG_COMPATIBILITY -->
-<!-- yangwen@MULTIMEDIA.MediaServer.cts.662064,20201207, -->
-<!-- Remove for deleting 4K video recording -->
-<!--
     <EncoderProfile quality="4kdci" fileFormat="mp4" duration="30">
       <Video codec="h264"
             bitRate="57500000"
@@ -1310,8 +1122,6 @@
             sampleRate="48000"
             channels="2" />
     </EncoderProfile>
--->
-<!-- #endif //OPLUS_BUG_COMPATIBILITY -->
 
     <EncoderProfile quality="qcif" fileFormat="3gp" duration="30">
       <Video codec="h264"
@@ -1354,23 +1164,12 @@
     </EncoderProfile>
 
     <EncoderProfile quality="timelapsehigh" fileFormat="mp4" duration="30">
-<!-- #ifndef OPLUS_BUG_COMPATIBILITY -->
-<!-- yangwen@MULTIMEDIA.MediaServer.cts.662064,20201207 -->
-<!-- Modify for deleting 4K video recording -->
-<!--
       <Video codec="h264"
              bitRate="50000000"
              width="3840"
              height="2160"
              frameRate="30" />
--->
-<!-- #else  //OPLUS_BUG_COMPATIBILITY -->
-      <Video codec="h264"
-             bitRate="20000000"
-             width="1920"
-             height="1080"
-             frameRate="30" />
-<!-- #endif //OPLUS_BUG_COMPATIBILITY -->
+
       <!-- audio setting is ignored -->
       <Audio codec="aac"
              bitRate="156000"
@@ -1477,10 +1276,6 @@
              channels="2" />
     </EncoderProfile>
 
-<!-- #ifndef OPLUS_BUG_COMPATIBILITY -->
-<!-- yangwen@MULTIMEDIA.MediaServer.cts.662064,20201207, -->
-<!-- Remove for deleting 4K video recording -->
-<!--
     <EncoderProfile quality="timelapse4kdci" fileFormat="mp4" duration="30">
       <Video codec="h264"
             bitRate="57500000"
@@ -1506,8 +1301,6 @@
             sampleRate="48000"
             channels="2" />
     </EncoderProfile>
--->
-<!-- #endif //OPLUS_BUG_COMPATIBILITY -->
 
     <EncoderProfile quality="highspeed1080p" fileFormat="mp4" duration="30">
       <Video codec="h264"
@@ -1587,23 +1380,11 @@
     </EncoderProfile>
 
     <EncoderProfile quality="high" fileFormat="mp4" duration="30">
-<!-- #ifndef OPLUS_BUG_COMPATIBILITY -->
-<!-- yangwen@MULTIMEDIA.MediaServer.cts.662064,20201207 -->
-<!-- Modify for deleting 4K video recording -->
-<!--
       <Video codec="h264"
              bitRate="50000000"
              width="3840"
              height="2160"
              frameRate="30" />
--->
-<!-- #else  //OPLUS_BUG_COMPATIBILITY -->
-      <Video codec="h264"
-             bitRate="20000000"
-             width="1920"
-             height="1080"
-             frameRate="30" />
-<!-- #endif //OPLUS_BUG_COMPATIBILITY -->
 
       <Audio codec="aac"
              bitRate="156000"
@@ -1675,10 +1456,6 @@
              sampleRate="48000"
              channels="2" />
     </EncoderProfile>
-<!-- #ifndef OPLUS_BUG_COMPATIBILITY -->
-<!-- yangwen@MULTIMEDIA.MediaServer.cts.662064,20201207, -->
-<!-- Modify for deleting 4K video recording -->
-<!--
 
     <EncoderProfile quality="4kdci" fileFormat="mp4" duration="30">
       <Video codec="h264"
@@ -1705,8 +1482,7 @@
             sampleRate="48000"
             channels="2" />
     </EncoderProfile>
--->
-<!-- #endif //OPLUS_BUG_COMPATIBILITY -->
+
     <EncoderProfile quality="qcif" fileFormat="3gp" duration="30">
       <Video codec="h264"
              bitRate="192000"
@@ -1748,23 +1524,12 @@
     </EncoderProfile>
 
     <EncoderProfile quality="timelapsehigh" fileFormat="mp4" duration="30">
-<!-- #ifndef OPLUS_BUG_COMPATIBILITY -->
-<!-- yangwen@MULTIMEDIA.MediaServer.cts.662064,20201207 -->
-<!-- Modify for deleting 4K video recording -->
-<!--
       <Video codec="h264"
              bitRate="50000000"
              width="3840"
              height="2160"
              frameRate="30" />
--->
-<!-- #else  //OPLUS_BUG_COMPATIBILITY -->
-      <Video codec="h264"
-             bitRate="20000000"
-             width="1920"
-             height="1080"
-             frameRate="30" />
-<!-- #endif //OPLUS_BUG_COMPATIBILITY -->
+
       <!-- audio setting is ignored -->
       <Audio codec="aac"
              bitRate="156000"
@@ -1869,10 +1634,6 @@
              sampleRate="48000"
              channels="2" />
     </EncoderProfile>
-<!-- #ifndef OPLUS_BUG_COMPATIBILITY -->
-<!-- yangwen@MULTIMEDIA.MediaServer.cts.662064,20201207, -->
-<!-- Modify for deleting 4K video recording -->
-<!--
 
     <EncoderProfile quality="timelapse4kdci" fileFormat="mp4" duration="30">
       <Video codec="h264"
@@ -1899,8 +1660,7 @@
             sampleRate="48000"
             channels="2" />
     </EncoderProfile>
--->
-<!-- #endif //OPLUS_BUG_COMPATIBILITY -->
+
         <ImageEncoding quality="95" />
         <ImageEncoding quality="80" />
         <ImageEncoding quality="70" />
@@ -1932,20 +1692,10 @@
          maxHFRFrameWidth="0" maxHFRFrameHeight="0"
          maxHFRMode="0"  />
 
-<!-- #ifndef OPLUS_BUG_COMPATIBILITY -->
-    <!-- Guanbiao.Liu@MULTIMEDIA.MEDIASERVICE.PLAYER, 2022/08/23, Modify for promote aac audio quality -->
-    <!--
     <AudioEncoderCap name="aac" enabled="true"
         minBitRate="8000" maxBitRate="96000"
         minSampleRate="8000" maxSampleRate="48000"
         minChannels="1" maxChannels="6" />
-    -->
-    <!-- #else  //OPLUS_BUG_COMPATIBILITY -->
-    <AudioEncoderCap name="aac" enabled="true"
-        minBitRate="8000" maxBitRate="256000"
-        minSampleRate="8000" maxSampleRate="48000"
-        minChannels="1" maxChannels="6" />
-    <!-- #endif //OPLUS_BUG_COMPATIBILITY -->
 
     <AudioEncoderCap name="heaac" enabled="true"
         minBitRate="8000" maxBitRate="64000"
